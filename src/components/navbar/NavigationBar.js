@@ -23,9 +23,9 @@ const NavigationBar = () => (
                 <Nav.Item as='li'>
                   <Link to="/project/" className="nav-link" activeClassName="active">Project</Link>
                 </Nav.Item>
-                <Nav.Item as='li'>
+                {/* <Nav.Item as='li'>
                   <Link to="/test/" className="nav-link" activeClassName="active">Test</Link>
-                </Nav.Item>
+                </Nav.Item> */}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
