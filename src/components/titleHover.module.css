@@ -1,0 +1,12 @@
+.hoverAnimate {
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, white 50% );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color:  transparent;
+    transition: 1s ease-out;
+}
+
+.hoverAnimate:hover {
+    background-position: -100%;
+}

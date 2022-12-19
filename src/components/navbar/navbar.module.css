@@ -1,0 +1,23 @@
+.separatorLine {
+    border: 0;
+    /* border-top: medium double #333; */
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #ffffff, transparent);
+    /* border-bottom: 2px solid black; */
+    /* width: 100%; */
+    margin-left: 2em;
+    margin-right: 2em;
+    /* animation: separator-width 3s ease-out forwards; */
+}
+
+@keyframes separator-width {
+    0% {
+        width: 0;
+   }
+    100% {
+        width: 85%;
+        display: inline-block;
+        background-color: white;
+
+   }
+}

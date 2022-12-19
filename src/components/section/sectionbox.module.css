@@ -1,0 +1,10 @@
+.sectionBox {
+    display: block;
+    min-height: 100px;
+    /* border: 1px solid black; */
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
