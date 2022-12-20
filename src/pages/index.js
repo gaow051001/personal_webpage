@@ -7,34 +7,61 @@ import * as hoverStyles from '../components/titleHover.module.css'
 import * as buttonStyles from '../components/buttonHover.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+import { useEffect } from "react";
+// AOS.init({
+//   // Global settings:
+//   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+//   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+//   initClassName: 'aos-init', // class applied after initialization
+//   animatedClassName: 'aos-animate', // class applied on animation
+//   useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+//   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+//   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+//   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
   
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 1000, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-});
+//   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+//   offset: 120, // offset (in px) from the original trigger point
+//   delay: 0, // values from 0 to 3000, with step 50ms
+//   duration: 1000, // values from 0 to 3000, with step 50ms
+//   easing: 'ease', // default easing for AOS animations
+//   once: false, // whether animation should happen only once - while scrolling down
+//   mirror: false, // whether elements should animate out while scrolling past them
+//   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+// });
 // import * as frameStyles from '../components/fancyFrame.module.css'
 // import * as gradientStyles from '../components/gradientAnimation.module.css'
 // import workDesk from "../images/workDesk.jpg"
 // import * as quoteStyles from '../components/textSlideShow.module.css'
 // import Image from 'react-bootstrap/Image'
 
-const IndexPage = () => (
+const IndexPage = () => {
+  useEffect(() => {
+    AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 50, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
+ 
+  return (
   <Layout>
     {/* <div style={{position: 'relative', left: "0", height: '20vh', width: '20em', clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", backgroundImage: "linear-gradient(90deg, #a1c4fd 10%, #c2e9fb 90%)", }}>
     </div> */}
@@ -53,7 +80,8 @@ const IndexPage = () => (
     </div>
     {/* <img className={frameStyles.fancyFrame} src={workDesk} style={{height: 'auto', width: '15vw'}}/> */}
   </Layout>
-);
+  );
+};
 export default IndexPage;
 /* <div className={quoteStyles.quoteBox}>
 <p className={quoteStyles.item1}>This is your last chance. After this, there is no turning back.</p>
