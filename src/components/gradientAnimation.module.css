@@ -20,6 +20,34 @@
 	}
 }
 
+.gradientText {
+	background: white;
+	/* linear-gradient(to right, #757f9a, #d7dde8); */
+	
+	/* linear-gradient(to right, #0f2027, #203a43, #2c5364); */
+	/* linear-gradient(to right, #c9d6ff, #e2e2e2); */
+	/* linear-gradient(to right, #ece9e6, #ffffff); */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.gradientLink {
+	background: white;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+	text-decoration: none;
+}
+
+.gradientLink:hover {
+	background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+	text-decoration: none;
+}
+
 /* .faded-right:after {
     position: relative;
     display: inline-block;

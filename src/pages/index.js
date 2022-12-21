@@ -1,14 +1,17 @@
 import React from "react";
-import * as icons from 'react-bootstrap-icons'
+import { Link } from "gatsby"
+// import * as icons from 'react-bootstrap-icons'
 import Layout from "../components/layout/Layout";
 import CarouselBox from "../components/carousel/CarouselBox"
 import * as styles from '../components/layout/gridlayout.module.css'
-import * as hoverStyles from '../components/titleHover.module.css'
-import * as buttonStyles from '../components/buttonHover.module.css'
+import * as gradientStyles from '../components/gradientAnimation.module.css'
+// import * as hoverStyles from '../components/titleHover.module.css'
+// import * as buttonStyles from '../components/buttonHover.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { useEffect } from "react";
+import { Container } from "react-bootstrap";
 // AOS.init({
 //   // Global settings:
 //   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -65,17 +68,25 @@ const IndexPage = () => {
   <Layout>
     {/* <div style={{position: 'relative', left: "0", height: '20vh', width: '20em', clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", backgroundImage: "linear-gradient(90deg, #a1c4fd 10%, #c2e9fb 90%)", }}>
     </div> */}
+    <Container style={{textAlign: 'right'}}>
+      <div data-aos="fade-in" className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "150%", fontStyle: 'italic'}}>Who am I?&nbsp; </div>
+      <div data-aos="fade-in" data-aos-delay={100} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Software Engineer.</div>
+      <div data-aos="fade-in" data-aos-delay={200} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Web-Developer.</div>
+      <div data-aos="fade-in" data-aos-delay={300} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Designer.</div>
+      <Link data-aos="fade-in" data-aos-delay={300} className={gradientStyles.gradientLink} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}} to="/profile/" activeClassName="active">About Me &#8883;</Link>
+    </Container>
+    
     <div className={styles.transparencyBox}>
       <div className={styles.parent}>
         <div className={styles.div1} style={{textAlign: "center"}}> 
           <CarouselBox/>
         </div>
-        <div className={styles.div4} style={{display: 'flex', justifyContent: "center", alignItems: 'end'}}>
+        {/* <div className={styles.div4} style={{display: 'flex', justifyContent: "center", alignItems: 'end'}}>
           <div style={{textAlign: 'right'}}>
             <h1 className={hoverStyles.hoverAnimate} style={{fontWeight: "lighter", fontSize: "400%", fontStyle: 'italic'}}> Welcome. &nbsp; &nbsp;</h1>
             <p style={{fontWeight: "lighter", fontSize: "200%", fontStyle: "italic"}} data-aos="fade-right">To My Webpage! <icons.Display className={buttonStyles.bounceHover}/> </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     {/* <img className={frameStyles.fancyFrame} src={workDesk} style={{height: 'auto', width: '15vw'}}/> */}
