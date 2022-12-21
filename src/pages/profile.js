@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import fullPic from "../images/fullPic.jpg"
+import resumePDF from "../assets/Resume_12_21_2022.pdf"
 import * as frameStyle from "../components/fancyFrame.module.css"
 import * as layoutStyle from "../components/layout/gridlayout.module.css"
 import * as icons from 'react-bootstrap-icons'
@@ -69,7 +70,7 @@ const ProfilePage = () => {
                         <Button data-aos="fade-down" data-aos-delay="1250" variant="dark" size="lg" style={{margin: "5px"}} href='https://github.com/gaow051001'>
                             <icons.Github style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                         </Button>
-                        <Button data-aos="fade-down" data-aos-delay="1500" variant="dark" size="lg" style={{margin: "5px"}}>
+                        <Button data-aos="fade-down" data-aos-delay="1500" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.facebook.com/weijie.gao.58'>
                             <icons.Facebook style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                         </Button>
                         <Button data-aos="fade-down" data-aos-delay="1750" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.instagram.com/fiji_gao/?next=%2F'>
@@ -102,13 +103,13 @@ const ProfilePage = () => {
                     <p data-aos="fade-down" data-aos-delay="1000" style={{fontSize: '150%'}}>
                      &mdash; Email &mdash;
                     </p>
-                    <Button data-aos="fade-down" data-aos-delay="1250" variant="outline-primary">
+                    <Button href="mailto:gaow051001@gmail.com" data-aos="fade-down" data-aos-delay="1250" variant="outline-primary">
                         <icons.EnvelopeAtFill style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                     </Button>
                     <p data-aos="fade-down" data-aos-delay="1500" style={{fontSize: '150%'}}>
                      &mdash; Resume &mdash;
                     </p>
-                    <Button data-aos="fade-down" data-aos-delay="1750" variant="outline-primary">
+                    <Button href={resumePDF} data-aos="fade-down" data-aos-delay="1750" variant="outline-primary">
                         Download PDF Version
                     </Button>
                     
