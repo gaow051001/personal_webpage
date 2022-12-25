@@ -9,10 +9,11 @@ const Layout = ({ children }) => {
     backgroundImage: `url(${bgImage})`,
     backgroundSize: "cover",               
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center", 
+    backgroundPosition: "center center",
+    backgroundAttachment: "fixed", 
     outline: "1.5px solid white",
     outlineOffset: "-.5em" }}>
-      <NavigationBar/>
+        <NavigationBar/>
       <main>{children}</main>
       <Footer/>
     </div>

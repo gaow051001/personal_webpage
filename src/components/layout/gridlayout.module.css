@@ -26,8 +26,18 @@
     background-color: rgba(265, 256, 256, .2) ;
     /* opacity: 0.5; */
     max-height: min-content;
+    max-width: 40em;
     height: auto;
-    padding: 5% 5% 10% 5%;
+    margin: auto auto auto auto;
+    padding: 2% 5% 2% 5%;
+}
+
+.blackBox {
+    background-color: black ;
+    min-height: fit-content; 
+    box-shadow: 0 0 5rem rgba(0, 0, 0.8);
+    padding-top: 5em;
+    padding-bottom: 5em;
     margin: auto;
 }
 
