@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import fullPic from "../images/fullPic.jpg"
+import pandaIcon from "../images/pandaIcon.png"
 import resumePDF from "../assets/Resume_12_21_2022.pdf"
 import * as frameStyle from "../components/fancyFrame.module.css"
 import * as layoutStyle from "../components/layout/gridlayout.module.css"
 import * as navbarStyle from "../components/navbar/navbar.module.css"
-import * as gradientStyles from '../components/gradientAnimation.module.css'
+import * as buttonStyles from '../components/buttonHover.module.css'
 import * as icons from 'react-bootstrap-icons'
-import logo from "../images/sign3.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -38,60 +38,62 @@ const ProfilePage = () => {
         });
     }, []);
     return (
-    <Layout>
-        <Container className={layoutStyle.scrim} style={{display: "block", minHeight: "92vh"}}>
-            <h1 style={{textAlign: "right", color: 'white', fontWeight: "lighter", margin:"auto", fontStyle:"italic", textShadow: '7px 7px 50px black'}}>
-                
-                <br/>
-                <br/> 
-                <span style={{color: "#F7D08A"}}>______________________</span>
-                <br/>
-                Create with a Purpose. <br/>
-                Innovate with Imagination.<br/>
-                Simplify for Tomorrow.
-            </h1>
-
+    <Layout data-aos="fade-in">
+        <Container className={layoutStyle.scrim} 
+            style={{
+            display: 'block',
+            textAlign: 'center',
+            paddingTop: '20vh',
+            minHeight: "92vh"}}>
+            <img src={pandaIcon} style={{maxWidth: "25vh", borderRadius: '50% 0% 50% 0%', boxShadow: '2em 2em 1em black'}}/>
+            <a href="#profile" style={{    
+                bottom: '4em',
+                position: 'absolute',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                left: '0',
+                right:'0',
+                textAlign: 'center'
+                }}>
+                <icons.ArrowDownCircle className={buttonStyles.buttonHover} size={'3em'}/>
+            </a>
         </Container>
         <hr className={navbarStyle.separatorLine}/>
-        <div className={layoutStyle.blackBox}>
+        <div id="profile" className={layoutStyle.whiteBox}>
             <Container>
                 <Row>
                     <Col style={{textAlign: 'center', color: 'white', fontWeight: "lighter", textShadow: "black 1px 1px", margin: 'auto'}}>
                         <img src={fullPic} className={frameStyle.outlineFrame} style={{maxWidth: "100%", margin: "auto"}}/>
                     </Col>
-                    <Col style={{textAlign: 'center', color: 'white', fontWeight: "lighter", margin: 'auto', paddingRight: '2vw', paddingLeft: '2vw'}}>
-                        <h1 style={{ color: "#F7D08A"}}>Profile.</h1>
+                    <Col style={{textAlign: 'left', fontWeight: "lighter", margin: 'auto', paddingRight: '2vw', paddingLeft: '2vw', fontFamily: "Calibri"}}>
+                        <h1>Profile.</h1>
                         <br/>
                         <br/>
-                        <br/>
-                        {/* <div data-aos="fade-down" data-aos-delay="250" style={{display:"inline-block", textAlign: "center", width: "inherit", whiteSpace: "pre-wrap", fontSize: '200%'}}>
-                            Nice to meet you!
-                        </div>
-                        <p data-aos="fade-down" data-aos-delay="500" style={{fontSize: '110%'}}>
-                            "Curiosity killed the cat, but satisfaction brought it back." 
-                            <br/>
-                            ...
-                        </p> */}
-                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'justify', textIndent: '5em', fontSize: 'large'}}>
+                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'left', fontSize: 'large'}}>
                             Hi! My name is Wei-Jie Gao. I'm a software engineer with preferences in Full-Stack. 
                             I'm also currently in my Senior year of B.S. Computer Science at Texas A&M University, 
                             minoring in Business and Mathematics. I have gained a multitude of interests, including the likes of designing, 
                             constructing, and enhancing projects. If anything piques my interest, I'm more than willing to learn and adapt 
                             to the new environment.
                         </p>
-                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'justify', textIndent: '5em', fontSize: 'large'}}>
+                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'left', fontSize: 'large'}}>
                             I'm open to any Software Engineer/Developer role and other engineering opportunities. 
-                            If you would like to talk more in-depth, the main way to contact me is through my email: &nbsp;
+                            If you would like to talk more in-depth, the main way to contact me is through my email:&nbsp;
                             <a href="mailto:gaow051001@gmail.com">gaow051001@gmail.com</a>. 
                             I look forward to our dicussion!
                         </p>
-                        {/* <p data-aos="fade-down" data-aos-delay="1500">
-                        Resume
-                        </p>
-                        <Button href={resumePDF} data-aos="fade-down" data-aos-delay="1750" variant="outline-primary">
-                            Download PDF Version
-                        </Button> */}
-                        <h3 data-aos="fade-down" data-aos-delay="1000" style={{display:"inline-block", color: "white", textAlign: "center", width: "inherit", whiteSpace: "pre-wrap", fontWeight: "lighter", textShadow: "black 1px 1px", padding: "5px"}}>
+                        <br/>
+                        <a href={resumePDF} className={buttonStyles.buttonOutline}> 
+                            Download Resume &nbsp;<icons.Download/>
+                        </a>  
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <br/>
+                        <br/>
+                        <hr/>
+                        <h3 data-aos="fade-down" data-aos-delay="1000" style={{display:"inline-block", textAlign: "center", width: "inherit", padding: "5px"}}>
                             Let's Connect!
                         </h3>
                         <div style={{display:"inline-block", color: "white", textAlign: "center", width: "inherit", whiteSpace: "pre-wrap"}}>
@@ -107,54 +109,114 @@ const ProfilePage = () => {
                             <Button data-aos="fade-down" data-aos-delay="2000" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.linkedin.com/in/wei-jie-gao-01aa29187/'>
                                 <icons.Linkedin style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                             </Button>
+                            
                         </div>
+                        <hr/>
                     </Col>
                 </Row>
             </Container>
         </div>
-        <div className={layoutStyle.blackBox}> 
+        <div className={layoutStyle.lightGreyBox}> 
             <Container>
-                <h1 style={{color: "#F7D08A"}}>Experience.</h1>
+                <h1 style={{textAlign: "center", margin:"auto", fontFamily: "Calibri"}}>Experience.</h1>
                 <br/>
                 <br/>
                 <br/>
-                <div style={{borderLeft: "3px double white"}}>
-                    <Row style={{textAlign: "left", color: 'white', fontWeight: "lighter", margin:"auto", fontStyle:"italic"}}>
+                <div style={{}}>
+                    {/* borderLeft: "3px double white" */}
+                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
                         <Col>
-                            <div style={{textIndent: '2em'}}>
-                                <h2 style={{fontSize: '1.5em'}}>USAA LifeCo</h2>
+                            <div style={{paddingLeft: '2em'}}>
+                                <h2 style={{fontSize: '1.5em'}}>Texas A&M Senior Capstone</h2>
                                 <p>
-                                    Software Engineer Intern
+                                    Developer & Validation Tester | College Station, TX | September 2022 - December 2022
                                 </p>
-                                <p>
-                                    
-                                </p>
+                                <ul>
+                                    <li>
+                                        Contributed on Hard/Soft Delete feature for Waiter open-source project (Two Sigma) that 
+                                        simplifies the method to remove an instance and reduces the overhead of the process
+
+                                    </li>
+                                    <li>
+                                        Directed the implementation of validation testing and ensured industry level code-quality
+                                    </li>
+                                </ul>
                             </div>
                         </Col>
                     </Row> 
-                    <Row style={{textAlign: "left", color: 'white', fontWeight: "lighter", margin:"auto", fontStyle:"italic"}}>
+                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
                         <Col>
-                            <div style={{textIndent: '2em'}}>
-                                <h2 style={{fontSize: '1.5em'}}>Texas A&M University College of Engineering</h2>
+                            <div style={{paddingLeft: '2em'}}>
+                                <h2 style={{fontSize: '1.5em'}}>USAA LifeCo</h2>
                                 <p>
-                                    Student Technician
+                                    Software Engineer Intern | San Antonio, TX |June 2022 - August 2022
                                 </p>
+                                <ul>
+                                    <li>
+                                        Collaborated on a server-driven UI that presents various states of modern health flow for 
+                                        a diverse group of users with different health complications
+                                    </li>
+                                    <li>
+                                        Implemented Unit and Integration Tests to monitor the server-to-UI interactions and 
+                                        maintain compliance with internal and external regulations
+                                    </li>
+                                    <li>
+                                        Participated with the team in Agile Development and presented a comprehensive
+                                        presentation to the LifeCo Department
+                                    </li>
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row> 
+                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                        <Col>
+                            <div style={{paddingLeft: '2em'}}>
+                                <h2 style={{fontSize: '1.5em'}}>Texas A&M University - College of Engineering</h2>
+                                <p>
+                                    Student Technician | College Station, TX |September 2021 - May 2022
+                                </p>
+                                <ul>
+                                    <li>
+                                    Delivered technical support to the ETID department by resolving software/hardware 
+                                    problems and broadening the client's IT knowledge
+                                    </li>
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                        <Col>
+                            <div style={{paddingLeft: '2em'}}>
+                                <h2 style={{fontSize: '1.5em'}}>Texas A&M Halliburton Engineering Global Program</h2>
+                                <p>
+                                    Back-End Developer & QA Tester | Thessaloniki, Greece | December 2021 - January 2022
+                                </p>
+                                <ul>
+                                    <li>
+                                        Collaborated with a team to develop a team-matching application based on the SaaS
+                                        concept and provide the user with a free and accessible tool to organize participants
+                                    </li>
+                                    <li>
+                                        Implemented Unit and Integration Tests in a Test-Driven Development process that
+                                        resulted in 97% code coverage of the implementation
+                                    </li>
+                                </ul>
                             </div>
                         </Col>
                     </Row>   
                 </div>
-                
             </Container>
         </div>
         <hr className={navbarStyle.separatorLine}/>
-        <Container>
+        {/* <Container>
+        <h1 style={{color: "#F7D08A"}}>Life Experience.</h1>
             <Row>
                 <Col>
                 </Col>
                 <Col>
                 </Col>
             </Row>
-        </Container>
+        </Container> */}
     </Layout>
     );
 };
