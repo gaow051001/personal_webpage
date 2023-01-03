@@ -1,14 +1,36 @@
 .buttonHover {
     transition: all .5s ease;
-    color: #000000;
+    color: white;
     border: none;
     background: none;
     width: fit-content;
     height: fit-content;
 }
 .buttonHover:hover {
-    color: rgb(224, 97, 97);
+    color: #B89AA0;
     /* background-color: #fff; */
+}
+
+.buttonOutline {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    /* border-radius: 8px; */
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #fff;
+    color: #222222;
+    text-decoration: none;
+}
+
+.buttonOutline:hover {
+    border-color: #000000;
+    color: #222222;
+    background: #f7f7f7;
 }
 
 .imageHover {
@@ -40,6 +62,8 @@
     40% {transform: translateY(-30px);} 
     60% {transform: translateY(-15px);} 
 } 
+
+
 
 .bounceHover:hover {
     -webkit-animation-name: bounce;

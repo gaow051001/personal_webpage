@@ -26,8 +26,55 @@
     background-color: rgba(265, 256, 256, .2) ;
     /* opacity: 0.5; */
     max-height: min-content;
+    max-width: 40em;
     height: auto;
-    padding: 5% 5% 10% 5%;
+    margin: auto auto auto auto;
+    padding: 2% 5% 2% 5%;
+}
+
+.whiteBox {
+    /* background-color: black; */
+    background-color: white;
+    min-height: fit-content; 
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0.8); */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: auto;
+}
+
+.blackBox {
+    background-color: black;
+    min-height: fit-content; 
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0.8); */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: auto;
+}
+
+.peachBox {
+    background-color: #F8EFE0;
+    min-height: fit-content; 
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0.8); */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: auto;
+}
+
+.lightGreyBox {
+    background-color: #F5F5F5;
+    min-height: fit-content; 
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0.8); */
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: auto;
+}
+
+.orangeBox {
+    background-color:#FAEAB1;
+    min-height: fit-content; 
+    /* box-shadow: 0 0 5rem rgba(0, 0, 0.8); */
+    padding-top: 2em;
+    padding-bottom: 2em;
     margin: auto;
 }
 
