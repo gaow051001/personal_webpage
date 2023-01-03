@@ -9,6 +9,7 @@ import * as layoutStyle from "../components/layout/gridlayout.module.css"
 import * as navbarStyle from "../components/navbar/navbar.module.css"
 import * as buttonStyles from '../components/buttonHover.module.css'
 import * as icons from 'react-bootstrap-icons'
+import '../components/fontCal/Calendas-Plus-Regular/Webfont/Calendas-Plus-Regular-Webfont/stylesheet.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -45,7 +46,13 @@ const ProfilePage = () => {
             textAlign: 'center',
             paddingTop: '20vh',
             minHeight: "92vh"}}>
-            <img src={pandaIcon} style={{maxWidth: "25vh", borderRadius: '50% 0% 50% 0%', boxShadow: '2em 2em 1em black'}}/>
+            {/* <img src={pandaIcon} style={{maxWidth: "25vh", borderRadius: '50% 0% 50% 0%', boxShadow: '2em 2em 1em black'}}/> */}
+            <h1 style={{color: 'white', fontSize: '7em', fontFamily: "calendas_plusregular", letterSpacing: '.1em', textShadow: '2px 2px 10px black'}}>
+                Wei-Jie Gao
+            </h1>
+            <p style={{color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black'}}>
+                Let's do it together.
+            </p>
             <a href="#profile" style={{    
                 bottom: '4em',
                 position: 'absolute',
@@ -65,7 +72,7 @@ const ProfilePage = () => {
                     <Col style={{textAlign: 'center', color: 'white', fontWeight: "lighter", textShadow: "black 1px 1px", margin: 'auto'}}>
                         <img src={fullPic} className={frameStyle.outlineFrame} style={{maxWidth: "100%", margin: "auto"}}/>
                     </Col>
-                    <Col style={{textAlign: 'left', fontWeight: "lighter", margin: 'auto', paddingRight: '2vw', paddingLeft: '2vw', fontFamily: "Calibri"}}>
+                    <Col style={{textAlign: 'left', fontWeight: "lighter", margin: 'auto', paddingRight: '2vw', paddingLeft: '2vw', fontFamily: "calendas_plusregular"}}>
                         <h1>Profile.</h1>
                         <br/>
                         <br/>
@@ -93,7 +100,7 @@ const ProfilePage = () => {
                         <br/>
                         <br/>
                         <hr/>
-                        <h3 data-aos="fade-down" data-aos-delay="1000" style={{display:"inline-block", textAlign: "center", width: "inherit", padding: "5px"}}>
+                        <h3 data-aos="fade-down" data-aos-delay="1000" style={{display:"inline-block", textAlign: "center", width: "inherit", padding: "5px", fontFamily: "calendas_plusregular"}}>
                             Let's Connect!
                         </h3>
                         <div style={{display:"inline-block", color: "white", textAlign: "center", width: "inherit", whiteSpace: "pre-wrap"}}>
@@ -117,14 +124,14 @@ const ProfilePage = () => {
             </Container>
         </div>
         <div className={layoutStyle.lightGreyBox}> 
-            <Container>
-                <h1 style={{textAlign: "center", margin:"auto", fontFamily: "Calibri"}}>Experience.</h1>
+            <Container style={{fontFamily: "calendas_plusregular"}}>
+                <h1 style={{textAlign: "center", margin:"auto"}}>Experience.</h1>
                 <br/>
                 <br/>
                 <br/>
                 <div style={{}}>
                     {/* borderLeft: "3px double white" */}
-                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                    <Row style={{textAlign: "left", margin:"auto"}}>
                         <Col>
                             <div style={{paddingLeft: '2em'}}>
                                 <h2 style={{fontSize: '1.5em'}}>Texas A&M Senior Capstone</h2>
@@ -144,7 +151,7 @@ const ProfilePage = () => {
                             </div>
                         </Col>
                     </Row> 
-                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                    <Row style={{textAlign: "left", margin:"auto"}}>
                         <Col>
                             <div style={{paddingLeft: '2em'}}>
                                 <h2 style={{fontSize: '1.5em'}}>USAA LifeCo</h2>
@@ -168,7 +175,7 @@ const ProfilePage = () => {
                             </div>
                         </Col>
                     </Row> 
-                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                    <Row style={{textAlign: "left", margin:"auto"}}>
                         <Col>
                             <div style={{paddingLeft: '2em'}}>
                                 <h2 style={{fontSize: '1.5em'}}>Texas A&M University - College of Engineering</h2>
@@ -184,7 +191,7 @@ const ProfilePage = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Row style={{textAlign: "left", margin:"auto", fontFamily: "Calibri"}}>
+                    <Row style={{textAlign: "left", margin:"auto"}}>
                         <Col>
                             <div style={{paddingLeft: '2em'}}>
                                 <h2 style={{fontSize: '1.5em'}}>Texas A&M Halliburton Engineering Global Program</h2>
