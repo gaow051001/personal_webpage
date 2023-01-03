@@ -4,6 +4,7 @@ import logo from "../../images/sign3.png"
 import { Container, Navbar, Nav } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as styles from "./navbar.module.css"
+import '../fontCal/Calendas-Plus-Regular/Webfont/Calendas-Plus-Regular-Webfont/stylesheet.css'
 
 const NavigationBar = () => (
     <header style={{display: "block", paddingTop: '1em'}}>
@@ -13,7 +14,7 @@ const NavigationBar = () => (
             <Link to="/"><img src={logo} alt={'Site Logo'} width="150"/></Link>
             <Navbar.Toggle aria-controls="navbarResponsive"/>
             <Navbar.Collapse id="navbarResponsive" className="justify-content-end">
-              <Nav as="ul" style={{fontWeight: "lighter", fontSize: "1.5em"}}>
+              <Nav as="ul" style={{fontWeight: "lighter", fontSize: "1.5em", fontFamily: "calendas_plusregular"}}>
                 <Nav.Item as='li'>
                   <Link to="/" className="nav-link" activeClassName="active">Home</Link>
                 </Nav.Item>

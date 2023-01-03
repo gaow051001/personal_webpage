@@ -16,6 +16,7 @@ import {
   MDBRow,
   MDBCol,
 } from 'mdb-react-ui-kit';
+import '../components/fontCal/Calendas-Plus-Regular/Webfont/Calendas-Plus-Regular-Webfont/stylesheet.css'
 import { Button, Container } from "react-bootstrap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -52,7 +53,7 @@ const ProjectPage = () => {
       <Container>
         {/* <h1 style={{textAlign: 'center', fontSize: '5em', fontWeight: 'lighter', color: 'white', marginBottom: '1em'}}>Projects</h1> */}
         <SectionBox>
-          <MDBRow className="row-cols-1 row-cols-md-2 g-4" style={{color: 'white', textShadow: "black 1px 1px"}}>
+          <MDBRow className="row-cols-1 row-cols-md-2 g-4" style={{color: 'white', fontFamily: "calendas_plusregular", textShadow: "black 1px 1px 5px"}}>
             <MDBCol>
               <MDBCard data-aos="fade-right" style={{margin: '3em 1em 3em 1em', backgroundColor: "rgba(265, 256, 256, .4"}}>
                   <MDBCardImage src={AIImg} fluid alt='...' position='top' className={hoverStyle.imageHover}/>
