@@ -48,10 +48,12 @@ const ProfilePage = () => {
             minHeight: "92vh"}}>
             {/* <img src={pandaIcon} style={{maxWidth: "25vh", borderRadius: '50% 0% 50% 0%', boxShadow: '2em 2em 1em black'}}/> */}
             <h1 style={{color: 'white', fontSize: '7em', fontFamily: "calendas_plusregular", letterSpacing: '.1em', textShadow: '2px 2px 10px black'}}>
-                Wei-Jie Gao
+                Me?
+                {/* Who am I? */}
             </h1>
             <p style={{color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black'}}>
-                Let's do it together.
+                Let's explore together.
+                {/* Let's do it together. */}
             </p>
             <a href="#profile" style={{    
                 bottom: '4em',
@@ -62,7 +64,8 @@ const ProfilePage = () => {
                 right:'0',
                 textAlign: 'center'
                 }}>
-                <icons.ArrowDownCircle className={buttonStyles.buttonHover} size={'3em'}/>
+                <div className={buttonStyles.arrow}></div>
+                {/* <icons.CaretDownFill className={buttonStyles.buttonHover} size={'3em'}/> */}
             </a>
         </Container>
         <hr className={navbarStyle.separatorLine}/>
@@ -76,14 +79,14 @@ const ProfilePage = () => {
                         <h1>Profile.</h1>
                         <br/>
                         <br/>
-                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'left', fontSize: 'large'}}>
-                            Hi! My name is Wei-Jie Gao. I'm a software engineer with preferences in Full-Stack. 
+                        <p style={{textAlign: 'left', fontSize: 'large'}}>
+                            Hi there! My name is Wei-Jie Gao. I'm a software engineer with preferences in Full-Stack. 
                             I'm also currently in my Senior year of B.S. Computer Science at Texas A&M University, 
                             minoring in Business and Mathematics. I have gained a multitude of interests, including the likes of designing, 
                             constructing, and enhancing projects. If anything piques my interest, I'm more than willing to learn and adapt 
                             to the new environment.
                         </p>
-                        <p data-aos="fade-down" data-aos-delay="750" style={{textAlign: 'left', fontSize: 'large'}}>
+                        <p style={{textAlign: 'left', fontSize: 'large'}}>
                             I'm open to any Software Engineer/Developer role and other engineering opportunities. 
                             If you would like to talk more in-depth, the main way to contact me is through my email:&nbsp;
                             <a href="mailto:gaow051001@gmail.com">gaow051001@gmail.com</a>. 
@@ -100,20 +103,20 @@ const ProfilePage = () => {
                         <br/>
                         <br/>
                         <hr/>
-                        <h3 data-aos="fade-down" data-aos-delay="1000" style={{display:"inline-block", textAlign: "center", width: "inherit", padding: "5px", fontFamily: "calendas_plusregular"}}>
+                        <h3 style={{display:"inline-block", textAlign: "center", width: "inherit", padding: "5px", fontFamily: "calendas_plusregular"}}>
                             Let's Connect!
                         </h3>
                         <div style={{display:"inline-block", color: "white", textAlign: "center", width: "inherit", whiteSpace: "pre-wrap"}}>
-                            <Button data-aos="fade-down" data-aos-delay="1250" variant="dark" size="lg" style={{margin: "5px"}} href='https://github.com/gaow051001'>
+                            <Button variant="dark" size="lg" style={{margin: "5px"}} href='https://github.com/gaow051001'>
                                 <icons.Github style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                             </Button>
-                            <Button data-aos="fade-down" data-aos-delay="1500" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.facebook.com/weijie.gao.58'>
+                            <Button variant="dark" size="lg" style={{margin: "5px"}} href='https://www.facebook.com/weijie.gao.58'>
                                 <icons.Facebook style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                             </Button>
-                            <Button data-aos="fade-down" data-aos-delay="1750" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.instagram.com/fiji_gao/?next=%2F'>
+                            <Button variant="dark" size="lg" style={{margin: "5px"}} href='https://www.instagram.com/fiji_gao/?next=%2F'>
                                 <icons.Instagram style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                             </Button>
-                            <Button data-aos="fade-down" data-aos-delay="2000" variant="dark" size="lg" style={{margin: "5px"}} href='https://www.linkedin.com/in/wei-jie-gao-01aa29187/'>
+                            <Button variant="dark" size="lg" style={{margin: "5px"}} href='https://www.linkedin.com/in/wei-jie-gao-01aa29187/'>
                                 <icons.Linkedin style={{margin: 'none', padding: 'none', fontSize: '1.5em'}}/>
                             </Button>
                             

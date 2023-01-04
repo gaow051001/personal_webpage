@@ -1,0 +1,22 @@
+.socialBar { 
+display: flex;
+flex-direction: column; 
+
+position:fixed; 
+color: white;
+right:0vw; top:30vh; 
+
+/* background:#ddd;  */
+
+margin-right:1vw; 
+/* border:1px solid #000;  */
+
+/* box-shadow:5px 5px 15px  */
+
+} 
+
+.header-actions--right .socialBar .icon:first-child{ 
+
+margin-left:1.25vw 
+
+}
