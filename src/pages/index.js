@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "gatsby"
-// import * as icons from 'react-bootstrap-icons'
+import * as icons from 'react-bootstrap-icons'
 import Layout from "../components/layout/Layout";
 import CarouselBox from "../components/carousel/CarouselBox"
 import * as styles from '../components/layout/gridlayout.module.css'
 import * as gradientStyles from '../components/gradientAnimation.module.css'
+import * as buttonStyles from '../components/buttonHover.module.css'
+import * as sideBarStyles from '../components/sideBar.module.css'
 import '../components/fontCal/Calendas-Plus-Regular/Webfont/Calendas-Plus-Regular-Webfont/stylesheet.css'
 // import * as hoverStyles from '../components/titleHover.module.css'
 // import * as buttonStyles from '../components/buttonHover.module.css'
@@ -33,7 +35,7 @@ const IndexPage = () => {
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 1000, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
+    once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
@@ -41,30 +43,50 @@ const IndexPage = () => {
  
   return (
   <Layout>
-    {/* <div style={{position: 'relative', left: "0", height: '20vh', width: '20em', clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", backgroundImage: "linear-gradient(90deg, #a1c4fd 10%, #c2e9fb 90%)", }}>
-    </div> */}
-    <Container style={{textAlign: 'right', fontFamily: "calendas_plusregular"}}>
-      <div data-aos="fade-in" className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "150%", fontStyle: 'italic'}}>Who am I?&nbsp; </div>
-      <div data-aos="fade-in" data-aos-delay={100} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Software Engineer.</div>
-      <div data-aos="fade-in" data-aos-delay={200} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Web-Developer.</div>
-      <div data-aos="fade-in" data-aos-delay={300} className={gradientStyles.gradientText} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}}>Designer.</div>
-      <Link data-aos="fade-in" data-aos-delay={300} className={gradientStyles.gradientLink} style={{fontWeight: "lighter", fontSize: "200%", fontStyle: 'italic'}} to="/profile/" activeClassName="active">About Me &#8883;</Link>
-    </Container>
-    
-    <div className={styles.transparencyBox}>
-      <div className={styles.parent}>
-        <div className={styles.div1} style={{textAlign: "center"}}> 
-          <CarouselBox/>
-        </div>
-        {/* <div className={styles.div4} style={{display: 'flex', justifyContent: "center", alignItems: 'end'}}>
-          <div style={{textAlign: 'right'}}>
-            <h1 className={hoverStyles.hoverAnimate} style={{fontWeight: "lighter", fontSize: "400%", fontStyle: 'italic'}}> Welcome. &nbsp; &nbsp;</h1>
-            <p style={{fontWeight: "lighter", fontSize: "200%", fontStyle: "italic"}} data-aos="fade-right">To My Webpage! <icons.Display className={buttonStyles.bounceHover}/> </p>
-          </div>
-        </div> */}
+    <Container
+      style={{
+      display: 'block',
+      textAlign: 'center',
+      paddingTop: '20vh',
+      minHeight: "80vh"}}>
+      {/* <img src={pandaIcon} style={{maxWidth: "25vh", borderRadius: '50% 0% 50% 0%', boxShadow: '2em 2em 1em black'}}/> */}
+      <h1 style={{color: 'white', fontSize: '7em', fontFamily: "calendas_plusregular", letterSpacing: '.1em', textShadow: '2px 2px 10px black'}}>
+          {/* Software Developer */}
+          {/* Who am I? */}
+          Hello World!
+      </h1>
+      <p style={{color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black'}}>
+          My name is Wei-Jie Gao.
+          <br/> 
+          I am a Web Developer, Software Engineer, and Designer. 
+          {/* Let's do it together. */}
+      </p>
+      <div styles={{display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%'}}>
+        <Link className={buttonStyles.animatedArrow} to="/profile/">
+          <span className={[buttonStyles.arrow2, buttonStyles.left].join(' ')}>
+            <span className={buttonStyles.shaft}></span>
+          </span>
+          <span className={buttonStyles.main}>
+            <span className={buttonStyles.text} styles={{color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black'}}>
+              Find out more
+            </span>
+            <span className={[buttonStyles.arrow2, buttonStyles.right].join(' ')}>
+              <span className={buttonStyles.shaft}></span>
+            </span>
+          </span>
+        </Link> 
       </div>
+           
+    </Container>
+    <div className={sideBarStyles.socialBar}>
+      <a className={buttonStyles.buttonHover} href='https://github.com/gaow051001'><icons.Github style={{margin: '.25em', fontSize: '2.5em'}}/></a>
+      <a className={buttonStyles.buttonHover} href='https://www.facebook.com/weijie.gao.58'><icons.Facebook style={{margin: '.25em', fontSize: '2.5em'}}/></a>
+      <a className={buttonStyles.buttonHover} href='https://www.instagram.com/fiji_gao/?next=%2F'><icons.Instagram style={{margin: '.25em', fontSize: '2.5em'}}/></a>
+      <a className={buttonStyles.buttonHover} href='https://www.linkedin.com/in/wei-jie-gao-01aa29187/'><icons.Linkedin style={{margin: '.25em', fontSize: '2.5em'}}/></a>
     </div>
-    {/* <img className={frameStyles.fancyFrame} src={workDesk} style={{height: 'auto', width: '15vw'}}/> */}
   </Layout>
   );
 };
@@ -115,3 +137,28 @@ style={{textAlign: "center", alignContent: "center", background: "linear-gradien
 </div>
 
 </div> */
+
+ {/* <div style={{position: 'relative', left: "0", height: '20vh', width: '20em', clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)", backgroundImage: "linear-gradient(90deg, #a1c4fd 10%, #c2e9fb 90%)", }}>
+    </div> */}
+    {/* <Container style={{textAlign: 'right', color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black'}}>
+      <div style={{}}>Who am I?&nbsp; </div>
+      <div style={{}}>Software Engineer.</div>
+      <div style={{}}>Web-Developer.</div>
+      <div style={{}}>Designer.</div>
+      <Link className={buttonStyles.buttonOutline} style={{}} to="/profile/" activeClassName="active">About Me &#8883;</Link>
+    </Container> */}
+    
+    // <div className={styles.transparencyBox}>
+    //   <div className={styles.parent}>
+    //     <div className={styles.div1} style={{textAlign: "center"}}> 
+    //       <CarouselBox/>
+    //     </div>
+    //     <div className={styles.div4} style={{display: 'flex', justifyContent: "center", alignItems: 'end'}}>
+    //       <div style={{textAlign: 'right'}}>
+    //         <h1 className={hoverStyles.hoverAnimate} style={{fontWeight: "lighter", fontSize: "400%", fontStyle: 'italic'}}> Welcome. &nbsp; &nbsp;</h1>
+    //         <p style={{fontWeight: "lighter", fontSize: "200%", fontStyle: "italic"}} data-aos="fade-right">To My Webpage! <icons.Display className={buttonStyles.bounceHover}/> </p>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    {/* <img className={frameStyles.fancyFrame} src={workDesk} style={{height: 'auto', width: '15vw'}}/> */}

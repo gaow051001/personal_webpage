@@ -22,7 +22,7 @@
     padding: 13px 23px;
     border: 1px solid #222222;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-    background: #fff;
+    /* background: #fff; */
     color: #222222;
     text-decoration: none;
 }
@@ -74,3 +74,181 @@
     animation-fill-mode: both; 
 }
 
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+  
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 3px #fff solid;
+  border-bottom: 3px #fff solid; 
+}
+ 
+.arrow:before {
+   content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+  animation-direction: reverse;
+}
+  
+.arrow:hover {
+    border-right: 3px #B89AA0 solid;
+    border-bottom: 3px #B89AA0 solid;
+    border-right: 1px #B89AA0 solid;
+    border-bottom: 1px #B89AA0 solid; 
+    color: #B89AA0;
+    /* background-color: #fff; */
+}
+
+@keyframes arrow {
+    0% {opacity: 0;}
+    50% {opacity: .8;}
+  100% {opacity: 0; transform: translate(-1em, -1em) ;}
+}
+
+.arrow2 {
+    width: 1px;
+    transition: all 0.2s;
+}
+.arrow2.left {
+    position: absolute;
+    top: 60%;
+    left: 0;
+}
+.arrow2.left > .shaft {
+    width: 0;
+    background-color: white;
+}
+.arrow2.left > .shaft:before, .arrow2.left > .shaft:after {
+    width: 0;
+    background-color: white;
+}
+.arrow2.left > .shaft:before {
+    transform: rotate(0);
+}
+.arrow2.left > .shaft:after {
+    transform: rotate(0);
+}
+.arrow2.right {
+    top: 3px;
+}
+.arrow2.right > .shaft {
+    width: 1px;
+    transition-delay: 0.2s;
+}
+.arrow2.right > .shaft:before, .arrow2.right > .shaft:after {
+    width: 8px;
+    transition-delay: 0.3s;
+    transition: all 0.5s;
+}
+.arrow2.right > .shaft:before {
+    transform: rotate(40deg);
+}
+.arrow2.right > .shaft:after {
+    transform: rotate(-40deg);
+}
+.arrow2 > .shaft {
+    background-color: white;
+    display: block;
+    height: 1px;
+    position: relative;
+    transition: all 0.2s;
+    transition-delay: 0;
+    will-change: transform;
+}
+.arrow2 > .shaft:before, .arrow2 > .shaft:after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.2s;
+    transition-delay: 0;
+}
+.arrow2 > .shaft:before {
+    transform-origin: top right;
+}
+.arrow2 > .shaft:after {
+    transform-origin: bottom right;
+}
+.animatedArrow {
+    display: inline-block;
+    color: white;
+    font-size: 1.25em;
+    font-style: italic;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+}
+.animatedArrow:hover {
+    color: #808080;
+}
+.animatedArrow:hover > .arrow2.left > .shaft {
+    width: 64px;
+    transition-delay: 0.1s;
+    background-color: #808080;
+}
+.animatedArrow:hover > .arrow2.left > .shaft:before, .animatedArrow:hover > .arrow2.left > .shaft:after {
+    width: 8px;
+    transition-delay: 0.1s;
+    background-color: #808080;
+}
+.animatedArrow:hover > .arrow2.left > .shaft:before {
+    transform: rotate(40deg);
+}
+.animatedArrow:hover > .arrow2.left > .shaft:after {
+    transform: rotate(-40deg);
+}
+.animatedArrow:hover > .main {
+    transform: translateX(17px);
+    transform: translateX(80px);
+}
+.animatedArrow:hover > .main > .arrow2.right > .shaft {
+    width: 0;
+    transform: translateX(200%);
+    transition-delay: 0;
+}
+.animatedArrow:hover > .main > .arrow2.right > .shaft:before, .animatedArrow:hover > .main > .arrow2.right > .shaft:after {
+    width: 0;
+    transition-delay: 0;
+    transition: all 0.1s;
+}
+.animatedArrow:hover > .main > .arrow2.right > .shaft:before {
+    transform: rotate(0);
+}
+.animatedArrow:hover > .main > .arrow2.right > .shaft:after {
+    transform: rotate(0);
+}
+.animatedArrow > .main {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+.animatedArrow > .main > .text {
+    margin: 0 16px 0 0;
+    line-height: 1;
+    text-shadow: 2px 2px 5px black;
+}
+.animatedArrow > .main > .arrow2 {
+    position: relative;
+}

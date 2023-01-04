@@ -51,7 +51,7 @@ const ProjectPage = () => {
   return (
     <Layout>
       <Container>
-        {/* <h1 style={{textAlign: 'center', fontSize: '5em', fontWeight: 'lighter', color: 'white', marginBottom: '1em'}}>Projects</h1> */}
+        {/* <h1 style={{textAlign: 'center', color: 'white', fontSize: '2em', fontFamily: "calendas_plusregular", textShadow: '2px 2px 5px black', marginBottom: '1em'}}>Projects</h1> */}
         <SectionBox>
           <MDBRow className="row-cols-1 row-cols-md-2 g-4" style={{color: 'white', fontFamily: "calendas_plusregular", textShadow: "black 1px 1px 5px"}}>
             <MDBCol>
